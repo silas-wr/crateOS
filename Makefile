@@ -26,7 +26,7 @@ iso: kernel
 	$(CP) $(BIN) $(BOOT_PATH)
 	$(CP) $(CFG) $(GRUB_PATH)
 	grub-file --is-x86-multiboot $(BOOT_PATH)/$(BIN)
-	grub-mkrescue -o my-kernel.iso $(ISO_PATH)
+	grub-mkrescue -o crateOS-0.0.1-x86_64.iso $(ISO_PATH)
 
 .PHONY: clean
 clean:
