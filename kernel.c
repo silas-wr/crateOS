@@ -38,8 +38,10 @@ void main(void)
 	vga_index = 0;
 
 	clear_screen();
-	print_string("Hello for the kernel!", YELLOW);
+	print_string("Hello from the kernel!", GREEN);
 	vga_index = 80; /* newline */
+	print_string("Some stuff here...", YELLOW);
+	vga_index = 160; /* newline */
 	print_string("Goodbye!", RED);
 	return;
 }
