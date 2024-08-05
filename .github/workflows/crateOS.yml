@@ -1,0 +1,22 @@
+name: Build CrateOS
+
+on:
+  push:
+    branches: [ "main" ]
+
+  workflow_dispatch:
+
+jobs:
+  make_iso:
+    name: build the iso
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: run GNU make
+      run: make
+
+    - name: commit
+      uses: stefanzweifel/git-auto-commit@v4
+      with:
+        commit_message: "Run GNU `make`"
