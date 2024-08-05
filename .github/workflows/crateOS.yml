@@ -18,8 +18,8 @@ jobs:
       uses: ilammy/setup-nasm@v1.5.1
             
     
-    - name: run GNU make
-      run: make
+    - name: run compilation script
+      run: bash compile.sh
 
     - name: commit
       uses: stefanzweifel/git-auto-commit-action@v5
