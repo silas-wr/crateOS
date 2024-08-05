@@ -13,6 +13,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+    
+    - name: Set up NASM
+      uses: ilammy/setup-nasm@v1.5.1
+            
+    
     - name: run GNU make
       run: make
 
